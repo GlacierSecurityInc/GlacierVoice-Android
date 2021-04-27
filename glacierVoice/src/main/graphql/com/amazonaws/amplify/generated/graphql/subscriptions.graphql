@@ -1,0 +1,76 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateGlacierUsers(
+  $email: String
+  $extension_voiceserver: String
+  $first_name: String
+  $organization: String
+  $username: String
+) {
+  onCreateGlacierUsers(
+    email: $email
+    extension_voiceserver: $extension_voiceserver
+    first_name: $first_name
+    organization: $organization
+    username: $username
+  ) {
+    email
+    extension_voiceserver
+    first_name
+    glacierpwd
+    last_name
+    messenger_id
+    organization
+    user_name
+    username
+  }
+}
+subscription OnDeleteGlacierUsers(
+  $email: String
+  $extension_voiceserver: String
+  $first_name: String
+  $organization: String
+  $username: String
+) {
+  onDeleteGlacierUsers(
+    email: $email
+    extension_voiceserver: $extension_voiceserver
+    first_name: $first_name
+    organization: $organization
+    username: $username
+  ) {
+    email
+    extension_voiceserver
+    first_name
+    glacierpwd
+    last_name
+    messenger_id
+    organization
+    user_name
+    username
+  }
+}
+subscription OnUpdateGlacierUsers(
+  $email: String
+  $extension_voiceserver: String
+  $first_name: String
+  $organization: String
+  $username: String
+) {
+  onUpdateGlacierUsers(
+    email: $email
+    extension_voiceserver: $extension_voiceserver
+    first_name: $first_name
+    organization: $organization
+    username: $username
+  ) {
+    email
+    extension_voiceserver
+    first_name
+    glacierpwd
+    last_name
+    messenger_id
+    organization
+    user_name
+    username
+  }
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <fragment
+        android:id="@+id/status"
+        android:name="org.linphone.fragments.StatusBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        tools:layout="@layout/status_bar" />
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/assistant_topbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/editor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/imageViewAppMainCognitoIcon"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/glacier_new_dial_launcher"
+                    android:scaleType="fitXY"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_inter_group_separation"
+                    android:layout_below="@+id/imageViewAppMainCognitoIcon"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/space_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/app_main_screen_title"
+                    android:textSize="30dp"
+                    android:id="@+id/textViewAppMainTitle"
+                    android:layout_below="@+id/space_1"
+                    android:layout_centerHorizontal="true" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_inter_group_separation"
+                    android:id="@+id/space"
+                    android:layout_below="@+id/textViewAppMainTitle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/space"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/account_user_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=" "/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_text_height"
+                        android:paddingLeft="@dimen/activity_text_padding"
+                        android:paddingRight="@dimen/activity_text_padding"
+                        android:id="@+id/assistant_username"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/text_border_selector"
+                        android:hint="Username"
+                        android:inputType="textPersonName"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="@dimen/activity_text_padding"
+                        android:text=" "
+                        android:textColor="@color/alert"
+                        android:id="@+id/account_user_message"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/account_password_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=" "/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_text_height"
+                        android:paddingLeft="@dimen/activity_text_padding"
+                        android:paddingRight="@dimen/activity_text_padding"
+                        android:id="@+id/assistant_password"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/text_border_selector"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="@dimen/activity_text_padding"
+                        android:text=" "
+                        android:textColor="@color/alert"
+                        android:id="@+id/account_password_message"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/account_orgid_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=" "/>
+
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/activity_text_height"-->
+<!--                        android:paddingLeft="@dimen/activity_text_padding"-->
+<!--                        android:paddingRight="@dimen/activity_text_padding"-->
+<!--                        android:id="@+id/assistant_domain"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:background="@drawable/text_border_selector"-->
+<!--                        android:hint="Org ID"-->
+<!--                        android:inputType="text" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAppearance="?android:attr/textAppearanceSmall"-->
+<!--                        android:textSize="@dimen/activity_text_padding"-->
+<!--                        android:text=" "-->
+<!--                        android:textColor="@color/alert"-->
+<!--                        android:id="@+id/account_orgid_message"-->
+<!--                        android:layout_centerHorizontal="true" />-->
+
+                    <Button
+                        android:id="@+id/assistant_login"
+                        android:text="@string/assistant_login"
+                        android:background="@drawable/assistant_button"
+                        android:textColor="@drawable/assistant_button_text_color"
+                        style="@style/font8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <Button
+                        android:id="@+id/assistant_logout"
+                        android:text="@string/account_logout_text"
+                        android:background="@drawable/assistant_button"
+                        android:textColor="@drawable/assistant_button_text_color"
+                        style="@style/font8"
+                        android:contentDescription="@string/account_logout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="20dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

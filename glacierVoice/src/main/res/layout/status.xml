@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/status"
+	android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+        
+	<RelativeLayout
+		android:id="@+id/status_bar"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ImageView
+			android:id="@+id/side_menu_button"
+			android:src="@drawable/menu_burger"
+			android:contentDescription="@string/content_description_menu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:layout_centerInParent="true"
+			android:layout_alignParentLeft="true"/>
+
+		<ImageView
+			android:id="@+id/call_quality"
+			android:src="@drawable/call_quality_indicator_0"
+			android:contentDescription="@string/content_description_call_quality"
+			android:layout_width="20dp"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@id/side_menu_button"
+			android:visibility="invisible" />
+
+		<ImageView
+			android:id="@+id/status_led"
+			android:layout_width="20dp"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@id/call_quality"
+			android:adjustViewBounds="true"
+			android:paddingLeft="5dp"
+			android:visibility="gone"
+			android:src="@drawable/led_disconnected" />
+
+		<TextView
+			android:id="@+id/status_text"
+			style="@style/status_bar_font"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/status_led"
+			android:gravity="center_vertical"
+			android:paddingLeft="5dp"
+			android:visibility="gone"
+			android:text="@string/status_not_connected" />
+
+		<ImageView
+			android:id="@+id/voicemail"
+			android:src="@drawable/voicemail"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:visibility="gone"
+			android:layout_below="@+id/encryption"
+			android:layout_toStartOf="@+id/voicemail_count"
+			android:layout_marginEnd="1dp" />
+
+		<TextView
+			android:id="@+id/voicemail_count"
+			style="@style/font14"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_toStartOf="@+id/voice_title_text"
+			android:layout_centerVertical="true"
+			android:paddingStart="0dp"
+			android:paddingEnd="1dp"
+			android:visibility="gone" />
+
+		<TextView
+			android:id="@+id/voice_title_text"
+			style="@style/font16"
+			android:layout_width="120dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:gravity="end|center_vertical"
+			android:paddingEnd="15dp"
+			android:text="@string/voice_title_text"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/encryption"
+			android:src="@drawable/security_ko"
+			android:contentDescription="@string/content_description_encryption"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:padding="5dp"
+			android:layout_centerInParent="true"
+			android:visibility="gone"
+			android:layout_alignParentRight="true" />
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" />
+	</ScrollView>
+
+</RelativeLayout>

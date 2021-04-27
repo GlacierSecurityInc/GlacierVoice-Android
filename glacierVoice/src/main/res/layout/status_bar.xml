@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="?attr/accentColor2"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/statuss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/side_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/content_description_menu"
+            android:padding="10dp"
+            android:src="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/status_led"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/side_menu_button"
+            android:adjustViewBounds="true"
+            android:paddingLeft="5dp"
+            android:src="@drawable/led_disconnected" />
+
+        <TextView
+            android:id="@+id/status_text"
+            style="@style/status_bar_font"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/status_led"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/status_not_connected" />
+
+        <ImageView
+            android:id="@+id/voicemail"
+            android:src="@drawable/voicemail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_toStartOf="@+id/voicemail_count"
+            android:layout_marginEnd="1dp" />
+
+        <TextView
+            android:id="@+id/voicemail_count"
+            style="@style/font14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/voice_title_text"
+            android:layout_centerVertical="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="1dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/voice_title_text"
+            style="@style/font16"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="15dp"
+            android:text="@string/voice_title_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
